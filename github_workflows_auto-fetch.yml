@@ -1,0 +1,16 @@
+name: Auto Fetch Job Postings
+
+on:
+  schedule:
+    - cron: '*/20 * * * *' # Every 20 minutes
+  workflow_dispatch:
+
+jobs:
+  fetch_jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      # Placeholder for future job fetching script
+      - name: Echo Job Fetch
+        run: echo "Job fetching script will run here."
